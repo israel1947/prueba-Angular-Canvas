@@ -15,5 +15,5 @@ Para hacer uso de las librerias utilizadas en la relizacion de la aplicación, e
  ### Despliegue del Servidor
  Para desplegar el servidor de la DB es necesario realizar los siguientes pasos:
  
- - Abrir la consola, y ejecutar un cd: ruta de la carpeta libros-server
+ - Abrir la consola y ejecutar un cd: ruta de la carpeta libros-server
  > json-server --watch db.json
