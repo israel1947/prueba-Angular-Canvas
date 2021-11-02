@@ -1,0 +1,69 @@
+
+
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar>
+            <span>Menú</span>
+
+            <span class="specer"></span>
+
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink="./listado"
+               mat-list-item
+               (click)="sidenav.toggle()">
+               <mat-icon mat-list-icon>home</mat-icon>
+                <span>Inicio</span>
+            </a>
+
+            <a routerLink="./agregar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+               <mat-icon mat-list-icon>add</mat-icon>
+                <span>Agregar Nuevo Libro</span>
+            </a>
+
+            <a routerLink="./buscar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+               <mat-icon mat-list-icon>search</mat-icon>
+                <span>Buscar Libro</span>
+            </a>
+
+            <a routerLink="../auth"
+               mat-list-item
+               (click)="sidenav.toggle()">
+               <mat-icon mat-list-icon>login</mat-icon>
+                <span>Sing In/Sing Up</span>
+            </a>
+            
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <a  routerLink="./listado"><h1>Book</h1><span class="logo">lending</span></a>
+ 
+        <span class="specer"></span>
+        
+        <span>{{auth.usuario}}</span>
+
+        <div class="img-user">
+            <img [src]="photoSelect || '/assets/no-image.png' ">
+        </div>
+
+    </mat-toolbar>
+    
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>

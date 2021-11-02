@@ -1,0 +1,54 @@
+
+<div class="mb-5"
+     fxLayout="row" 
+     fxLayoutAlign="center center">
+    <app-buscar></app-buscar>
+</div>
+
+<mat-grid-list cols="1" 
+              *ngIf="!libro; else divheroe">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divheroe>
+
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="30px">
+
+    <div  class="m-3" fxFlex="50" fxLayoutAlign="center ">
+         <img mat-card-image [src]="libro | imagen" alt="">
+    </div>
+
+    <div  class="m-3" fxFlex="50">
+        <h1>{{libro.titulo}}</h1>
+        <mat-divider></mat-divider>
+
+        
+        <div class="mb-5"
+             fxLayout="row"
+             fxLayoutAlign="space-between end" >
+            <mat-list>
+                <mat-list-item>Autor: <strong>{{libro.Autor}}</strong></mat-list-item>
+                <mat-list-item>Categoría:<strong>{{libro.Categoria}}</strong></mat-list-item>
+                <mat-list-item>Año:<strong>{{libro.Anio}}</strong></mat-list-item>
+                <mat-list-item>Idioma:<strong>{{libro.Idioma}}</strong></mat-list-item>
+                <mat-list-item>N.de Paginas:<strong>{{libro.paginas}}</strong></mat-list-item>
+            </mat-list>
+            
+            <button  (click)="back()" mat-raised-button color="accent">Atrás</button>
+            <button  (click)="apartar()" mat-raised-button color="primary">Apartar libro</button>
+        </div>
+
+        <div>
+            <h2>Reseña del Libro</h2>
+            <p>
+                {{libro.Resenia}}
+            </p>
+        </div>
+   </div>
+</div>
+</ng-template>

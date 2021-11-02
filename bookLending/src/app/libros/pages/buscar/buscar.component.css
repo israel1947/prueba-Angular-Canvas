@@ -1,0 +1,21 @@
+
+
+/*.bg-buscar{
+    background-image: url(/assets/bg-registro.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid;
+}*/
+.busqueda{
+    margin-top: 1.5rem;
+}
+
+
+
+h1{
+  color:#9eeed6;
+  font-weight: 900;
+  font-size: 38px;
+  margin-top: 1rem;
+}

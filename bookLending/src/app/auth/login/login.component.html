@@ -1,0 +1,35 @@
+
+<div class="login-container ">
+
+    <div class="image">
+        <div class="login-btn" >
+          <h1>Hellow Friend!</h1>
+          <span>para registarte con nosotros,<br> usa tu info perosnal</span>
+          <button routerLink="/auth/register" id="registrar" type="submit" mat-raised-button>Registarme<mat-icon mat-list-icon>how_to_reg</mat-icon></button>
+        </div>
+      </div>
+
+    <div class="login-form  animate__animated animate__fadeInRight ">
+                <mat-card>
+                        <mat-card-content>
+                
+                            <h1>Sing In</h1>
+        
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label><mat-icon mat-list-icon>person</mat-icon>Correo Electronico</mat-label>
+                                <input matInput placeholder="pat@example.com" required>
+                            </mat-form-field>
+        
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label><mat-icon mat-list-icon>lock </mat-icon>Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" required>
+                                <mat-icon mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </mat-form-field>
+    
+        
+                            <button type="submit" (click)="login()" mat-raised-button>Sing In <mat-icon mat-list-icon>login</mat-icon></button>
+    
+                        </mat-card-content> 
+                </mat-card>
+         </div>
+</div>

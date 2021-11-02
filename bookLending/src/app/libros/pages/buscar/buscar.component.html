@@ -1,0 +1,50 @@
+
+<div fxLayout="column"  class="bg-buscar">
+
+    <div>
+       <h1 fxLayoutAlign="center center" >Busca tú libro aquí...</h1>
+        <mat-divider></mat-divider>
+    </div>
+
+    <div fxLayout="column" 
+         class="busqueda">
+        <mat-form-field   appearance="fill" >
+            
+            <mat-label >
+                <mat-icon mat-list-icon >
+                    search
+                </mat-icon> 
+                Buscar libro...
+            </mat-label>
+
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="Number"
+                   matInput
+                   [(ngModel)]="termino"
+                   [matAutocomplete]="auto"
+                   (input)="buscando()">
+
+            <mat-autocomplete  autoActiveFirstOption  
+                               #auto="matAutocomplete"
+                               (optionSelected)="opcionSelect ($event)">
+
+              <mat-option *ngFor="let libro of libros" 
+                           [value]="libro">
+                {{libro.titulo}}
+              </mat-option>
+
+              <mat-option *ngIf="libros.length===0  && termino.trim().length > 0" value="">
+                no encontramos resultados de la busqueda {{termino}}
+              </mat-option>
+
+            </mat-autocomplete>
+          </mat-form-field>
+    </div>
+</div>
+
+<div *ngIf="libroSeleccionado" fxLayout="column" fxLayoutAlign="space-around center">
+
+
+  <app-libro-tarjeta [libro]="libroSeleccionado"></app-libro-tarjeta>
+</div>

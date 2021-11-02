@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{libro.titulo}}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image [src]="libro | imagen" alt="imagen de la portada del libro">
+
+    <mat-card-content>
+        <h3>Autor: <strong>{{libro.Autor}}</strong></h3>
+        <p>
+            <strong>Categoría: </strong>{{libro.Categoria}}
+            <br>
+            <strong>N. de pagínas: </strong>{{libro.paginas}}
+            <br>
+            <strong>Idioma: </strong>{{libro.Idioma}}
+            <br>
+            <strong>Idioma: </strong>{{libro.Anio}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions fxLayoutAlign="end" >
+        <button [routerLink]="['/libros', libro.id]" mat-button color="warn">Leer Más...</button>
+        <button [routerLink]="['/libros/editar', libro.id]"  mat-button color="info">Editar</button>
+    </mat-card-actions>
+</mat-card>

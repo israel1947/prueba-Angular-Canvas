@@ -1,0 +1,110 @@
+
+
+<div class="register-container ">
+    <div class="register-form animate__animated animate__fadeInLeft ">
+         <mat-card>
+            <mat-card-content>
+                <h1>REGISTRO</h1>
+                        
+                   <form  autocomplete="off" 
+                            [formGroup]="miFormulario"
+                             (ngSubmit)="registrar()" >
+
+                  <!---------------------- nombre de usuario------------------------>
+                            <mat-form-field class="full-width-input"
+                                            appearance="outline">
+
+                                <input type="text"
+                                       matInput placeholder="Username"
+                                       formControlName="usuario">
+
+                                        <span class="form-text text-danger"
+                                              *ngIf="campoInvalido('usuario')">
+                                             ingrese nombre de usuario 
+                                        </span>
+                            </mat-form-field>
+                     <!---------------------- Email------------------------>
+ 
+                            <mat-form-field class="full-width-input" 
+                                            appearance="outline">
+                                <mat-label>
+                                    <mat-icon mat-list-icon>person
+                                    </mat-icon>Correo Electronico
+                                </mat-label>
+
+                                <input matInput 
+                                       placeholder="pat@example.com" 
+                                       required
+                                       formControlName="email">
+
+                                         <span class="form-text text-danger"
+                                               *ngIf="campoInvalido('email')">
+                                               {{emailErrorMsg}}
+                                         </span>
+                            </mat-form-field>
+                      <!---------------------- Password------------------------>
+                            <mat-form-field class="full-width-input" 
+                                            appearance="outline">
+                                <mat-label>
+                                    <mat-icon mat-list-icon>lock  
+                                    </mat-icon> Password
+                                </mat-label>
+                                 
+                                <input type="password" 
+                                       matInput placeholder="Contraseña"
+                                       required
+                                       formControlName="password">
+
+                                     <span class="form-text text-danger"
+                                           *ngIf="campoInvalido('password')">
+                                                password debe ser mayor a 6 caracteres
+                                     </span>
+                            </mat-form-field>
+
+                            <!----------------------confirmar Password------------------------>
+                            <mat-form-field class="full-width-input" 
+                                            appearance="outline">
+                                <mat-label>
+                                    <mat-icon mat-list-icon>lock
+                                    </mat-icon>Confirmar Password
+                                </mat-label>
+                                 
+                                <input type="password" 
+                                       matInput placeholder="Contraseña"
+                                       formControlName="passwordconfirm">
+
+                                         <span class="form-text text-danger"
+                                               *ngIf="campoInvalido('passwordconfirm')">
+                                               El password no coinciden
+                                         </span>
+                            </mat-form-field>
+
+                          <!----------------------Btn registrar------------------------>
+                            <button type="submit"
+                                    [disabled]="miFormulario.invalid"
+                                    mat-raised-button
+                                    routerLink="/libros/listado">
+                                    Registarme
+                                <mat-icon mat-list-icon>
+                                    how_to_reg
+                                </mat-icon>
+                            </button>
+
+                        </form>
+                    </mat-card-content> 
+                </mat-card>
+         </div>
+    <div class="image">
+        <div class="register-btn" >
+            <h1>Welcome Back!</h1>
+            <span>Inicia sesion con <br>tus datos perosnales</span>
+            <button routerLink="/auth/login" 
+                    id="registrar" 
+                    type="submit" mat-raised-button>
+                    Sing In
+                    <mat-icon mat-list-icon>login
+                    </mat-icon>
+                </button>
+          </div>
+    </div>
+</div>

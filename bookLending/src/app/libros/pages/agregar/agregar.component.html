@@ -1,0 +1,82 @@
+<h1>{{ (libro.id)?'Editar' : 'Nuevo' }} Libro <small>{{libro.titulo}}</small></h1>
+
+<div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column">
+
+    <div fxFlex="50" fxLayout="column">
+
+        <div fxFlex="50" fxLayoutGap="20px" fxLayout.xs="column">
+
+            <mat-form-field fxFlex="100">
+                <mat-label>Titulo</mat-label>
+                <input type="text" matInput required [(ngModel)]="libro.titulo">
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="100">
+                <mat-label>Autor</mat-label>
+                <input type="text" matInput required [(ngModel)]="libro.Autor">
+            </mat-form-field>
+        </div>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Categoría</mat-label>
+            <input type="text" matInput required [(ngModel)]="libro.Categoria">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Año</mat-label>
+            <input type="text" matInput required [(ngModel)]="libro.Anio">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Idioma</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let idioma of idiomas" [value]="idioma.id" >
+                    {{idioma.leng}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>N. de Páginas</mat-label>
+            <input type="text" matInput required [(ngModel)]="libro.paginas">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Reseña del libro</mat-label>
+            <input type="text" matInput required [(ngModel)]="libro.Resenia">
+        </mat-form-field>
+        
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Foto Url</mat-label>
+            <input type="url"
+                   matInput
+                   [(ngModel)]="libro.alt_img"
+                   required>
+        </mat-form-field>
+
+        <div fxLayout>
+            <button mat-raised-button
+                    (click)="guardar()"
+                    color="primary">
+                <mat-icon mat-list-icon>save</mat-icon>
+                {{ (libro.id)?'Actualizar' : 'Crear' }}
+            </button>
+
+            <span class="specer"></span>
+
+            <button *ngIf="libro.id"
+                    mat-raised-button
+                    color="warn"
+                    (click)="deleteLibro()">
+                <mat-icon mat-list-icon>delete</mat-icon>
+                Borrar
+            </button>
+        </div>
+
+    </div>
+
+    <div fxFlex="50">
+        <img [src]="libro | imagen ">
+    </div>
+</div>

@@ -1,0 +1,215 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "librosprestados": [
+    {
+      "id": 1,
+      "titulo": "Boulevard",
+      "Apellidos": "Flor M Salvador",
+      "Nombres": "israel polo",
+      "direccion": "cra 18 #7a-17, ",
+      "telefono": "3217086021",
+      "email": "correo@correo.com",
+      "fecha_entrega": "30/10/2030",
+      "fecha_devolucion": "30/10/2030",
+      "firma": " data:image/png;base64,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"
+    }
+  ],
+  "libros": [
+    {
+      "id": "Boulevard",
+      "titulo": "Boulevard",
+      "Autor": "Flor M Salvador",
+      "Categoria": "Juvenil",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "paginas": 316,
+      "Resenia": "Luke y Hasley no eran el prototipo de una pareja perfecta. Sin embargo, ambos le pusieron definición a lo que ellos crearon. Una historia de dos adolescentes que crean su propio boulevard ante la llovizna que hay en sus corazones, donde se entremezcla, por un lado, un azul cálido, y por el otro, un azul eléctrico, tiñéndose este por completo de un gris nostálgico. ¿Quién dijo que después de la tormenta sale el sol cuando puede haber un rayo?"
+    },
+    {
+      "id": "Una-tierra-prometida",
+      "titulo": "Una tierra prometida",
+      "Autor": "Barack Obama",
+      "Categoria": "Biografia",
+      "Anio": 2020,
+      "Idioma": "Español",
+      "paginas": "",
+      "Resenia": "En este extraordinario primer volumen de sus esperadas memorias presidenciales, Barack Obama narra la historia de su sorprendente evolución de ser un joven en busca de su identidad a convertirse en líder del mundo occidental, describiendo con increíble detalle tanto su formación política como los momentos cumbre del primer período de su histórica presidencia, una época de una gran conmoción y de profunda transformación. Obama invita a sus lectores a un viaje cautivador que va desde sus más tempranas aspiraciones políticas, pasando por la decisiva victoria de Iowa que demostró el poder del activismo comunitario, hasta la emotiva noche del 4 de noviembre de 2008, cuando fue elegido el presidente número 44 de los Estados Unidos, convirtiéndose en el primer afroamericano en ocupar el más alto cargo de la nación."
+    },
+    {
+      "id": "Una-vida-muchas-vidas",
+      "titulo": "Una vida muchas vidas",
+      "Autor": "Petro Gustavo",
+      "Categoria": "Biografia",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "paginas": 344,
+      "Resenia": "La vida de Gustavo Petro no es tan conocida a pesar de que su participación en la vida pública del país ha sido destacada como representante a la Cámara, Senador de la República y Alcalde de Bogotá. Poco se sabe de sus primeros años, cuando sus padres se conocieron en la Bogotá de finales de los años cincuenta y la parábola de una vida que comenzó en su natal Ciénaga de Oro, en el barrio Las Cruces, o en Zipaquirá, su municipio de crianza donde estudió en el mismo colegio de su escritor más admirado, Gabriel García Márquez.Lector, estudioso, rebelde, miembro del M-19, uno de los políticos más conspicuos de la oposición en Colombia, sus valientes denuncias destaparon un puñado de escándalos entre los cuales se encuentran la terrible práctica de los falsos positivos, en la que murieron 6402 muchachos que fueron declarados botines de guerra siendo inocentes. En esta memoria se pone de presente el talante de un hombre a través de los hechos de su vida, siempre pasados por el análisis de la desigualdad de un país que quiere resistirse a vivir condenado a otros cien años de soledad."
+    },
+    {
+      "id": "Las-Trampas-del-Miedo",
+      "titulo": "Las Trampas del Miedo",
+      "Autor": "Daniel Habif",
+      "Categoria": "Autoayuda y superación",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "paginas": 432,
+      "Resenia": "Un arsenal de armas contra el miedo que te llevará a establecer una nueva relación con las circunstancias que te producirán e iniciarán el camino a un nuevo y mejor futuro. a las dimensiones biológicas, psicológicas y espirituales de los temores que debemos desmantelar. El autor explica cómo operan estas trampas y ofrece herramientas para superarlas, pero no se queda allí: incluye varias de las secuelas que el miedo causa y explora alternativas para enfrentarlas. "
+    },
+    {
+      "id": "Almendra",
+      "titulo": "Almendra",
+      "Autor": "Won Pyung Sohn",
+      "Categoria": "Literatura juvenil",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "paginas": 256,
+      "Resenia": "Un arsenal de armas contra el miedo que te llevará a establecer una nueva relación con las circunstancias que te producirán e iniciarán el camino a un nuevo y mejor futuro. a las dimensiones biológicas, psicológicas y espirituales de los temores que debemos desmantelar. El autor explica cómo operan estas trampas y ofrece herramientas para superarlas, pero no se queda allí: incluye varias de las secuelas que el miedo causa y explora alternativas para enfrentarlas. "
+    },
+    {
+      "id": "Tulio-en-su-salsa",
+      "titulo": "Tulio en su salsa",
+      "Autor": "Tulio Zuluaga",
+      "Categoria": "Cocina",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "páginas": 160,
+      "Resenia": "Esta obra es más que un simple libro de cocina, pues engloba todo el mundo de TulioRecomienda, el influenciador gastronómico más importante de Colombia. Mezclados entre las páginas, como el mejor de los platos, el lector encontrará: divertidas historias personales de Tulio en torno a algunas recetas, artículos de opinión que resaltan su objetivo de democratizar la cocina, las recetas más sorprendentes de su autoría (divididas en desayuno, plato fuerte, para picar, bebidas y postres) y recomendaciones de emprendimientos y comida callejera en diferentes ciudades del país. Una libro para ver, leer, disfrutar y cocinar."
+    },
+    {
+      "id": "La-condesa-de-Cagliostro",
+      "titulo": "La condesa de Cagliostro",
+      "Autor": "Arsenio Lupin ",
+      "Categoria": "",
+      "Anio": "",
+      "Idioma": "Español",
+      "paginas": "",
+      "Resenia": "La obra que se constituye en el eslabón clave para lograr captar el fondo real de la saga de Maurice Leblanc, de las desviadas maneras y el aparente antisocial espíritu de Arsenio Lupin. “Raúl se frotó las manos. Decidió volver a la posada y dormir. A su tiempo se enteraría de lo que preparaban el barón y sus invitados y de quién era la ‘criatura infernal’ a la que deseaban suprimir."
+    },
+    {
+      "id": "El-viaje-a-la-semilla",
+      "titulo": "El viaje a la semilla",
+      "Autor": "Saldívar, Dasso",
+      "Categoria": "Actualidad",
+      "Anio": 2021,
+      "Idioma": "Español",
+      "paginas": "",
+      "Resenia": "El viaje a la semilla es sin duda la biografía más completa sobre el autor colombiano escrita y publicada hasta la fecha. Tiene su origen en dos preguntas que llevaban veinte años obsesionado a Dasso Saldívar: ¿Quién es el hombre que escribió Cien años de soledad? ¿Cuál es la realidad histórica, cultural, familiar y personal que subyace en esta prodigiosa novela?"
+    },
+    {
+      "id": "El-viaje-a-la-semilla-biografía",
+      "titulo": "El viaje a la semilla biografía",
+      "Autor": "Saldívar, Dasso",
+      "Categoria": "Crítica literaria.",
+      "Anio": 2006,
+      "Idioma": "Español",
+      "paginas": 544,
+      "Reseña": "García Márquez. El viaje a la semilla es sin duda la biografía más completa sobre el autor colombiano escrita y publicada hasta la fecha; no en vano ha sido traducida a diez idiomas, entre ellos el mandarín y el chino, las dos lenguas mayoritarias de China, país en el que el libro fue galardonado con el Premio Nacional a la Excelencia Literaria Extranjera en Versión China Años 2001-2002, concedido por el Ministerio de Cultura de China."
+    },
+    {
+      "id": "La-Hojarasca",
+      "titulo": "La Hojarasca",
+      "Autor": "Gabriel García Márquez",
+      "Categoria": "Literatura",
+      "Anio": 2012,
+      "Idioma": "Español",
+      "paginas": 169,
+      "Reseña": "En La hojarasca nació Macondo, ese poblachón cercano a la costa atlántica colombiana que ya se ha convertido en uno de los grandes mitos de la literatura universal. En él transcurre la historia de un entierro imposible. Ha muerto un personaje extraño, un antiguo médico odiado por el pueblo, y un viejo coronel retirado"
+    },
+    {
+      "id": "Del-Amor-y-Otros-Demonios",
+      "titulo": "Del Amor y Otros Demonios",
+      "Autor": "Gabriel García Márquez",
+      "Categoria": "Literatura",
+      "Anio": "",
+      "Idioma": "Español",
+      "paginas": "",
+      "Resenia": "El 26 de octubre de 1949 el reportero Gabriel García Márquez fue enviado al antiguo convento de Santa Clara, que iba a ser demolido para edificar sobre él un hotel de cinco estrellas, a presenciar el vaciado de las criptas funerarias y a cubrir la noticia. Se exhumaron los restos de un virrey del Perú y su amante secreta, un obispo, varias abadesas, un bachiller de artes y una marquesa."
+    },
+    {
+      "id": "Batman-Caballero-Blanco",
+      "titulo": "Batman Caballero Blanco",
+      "Autor": "Matt Murphy Sean / Hollingsworth",
+      "Categoria": "Cómic",
+      "Año": 2019,
+      "Idioma": "Español",
+      "paginas": 232,
+      "Resenia": "Ambientada en un mundo donde el Payaso Príncipe del Crimen se ha curado de su locura, el hombre ahora conocido como Jack Napier se embarca en una búsqueda para curar la ciudad que una vez aterrorizó y para desacreditar a la persona que ve como el verdadero enemigo de Gotham: Batman."
+    },
+    {
+      "id": "Planeta-Hulk-Integral",
+      "titulo": "Planeta Hulk Integral",
+      "Autor": "Greg Pak",
+      "Categoria": "Cómic",
+      "Anio": 2010,
+      "Idioma": "Español",
+      "paginas": 400,
+      "Resenia": "Contiene The Incredible Hulk v2, 88-105, The New Avengers: Illuminati, Giant-Size Hulk 1 y Amazing Fantasy v2, 15 ¡La más espectacular aventura jamás protagonizada por el Goliat Verde, con su prólogo, recopilada en un único y aplastante volumen! Un planeta alienígena salvaje."
+    },
+    {
+      "id": "El-Lenguaje-del-Futbol",
+      "titulo": "El Lenguaje del Futbol",
+      "Autor": "Guillermo Torales Caballero",
+      "Categoria": "Deporte",
+      "Anio": 2009,
+      "Idioma": "Español",
+      "paginas": "",
+      "Resenia": ""
+    },
+    {
+      "id": "Los-Amantes-de-Praga",
+      "titulo": "Los Amantes de Praga",
+      "Autor": "Alyson Richman",
+      "Categoria": "Literatura",
+      "Anio": 2017,
+      "Idioma": "Castellano",
+      "paginas": 344,
+      "Resenia": "En la Praga de los años treinta, Lenka, una joven estudiante de arte, se enamora perdidamente de Josef. Ambos se casan, pero, al igual que muchos otros compatriotas, sus sueños se hacen añicos ante la inminente invasión nazi y deciden huir a Estados Unidos. Sin embargo, en el último momento, Lenka decide quedarse en Praga. En Estados Unidos, Josef se convierte en un obstetra de éxito y rehace su vida. "
+    },
+    {
+      "id": "Historia-Secreta-de-Chile",
+      "titulo": "Historia Secreta de Chile",
+      "Autor": "Jorge Baradit",
+      "Categoria": "Literatura",
+      "Anio": 2009,
+      "Idioma": "Español",
+      "paginas": 176,
+      "Resenia": "¿Arturo Prat fue un apasionado espiritista? ¿Por qué murió asesinado Manuel Rodríguez y donde se encuentran sus restos? ¿Hubo en la Patagonia una monarquía dirigida por un francés cuyos súbditos eran un grupo de mapuches? ¿La estrella solitaria de nuestra bandera en un símbolo luciferino? ¿La clase política del siglo XX "
+    },
+    {
+      "id": "Ygdrasil",
+      "titulo": "Ygdrasil",
+      "Autor": "Jorge Baradit",
+      "Categoria": "Literatura",
+      "Anio": 2009,
+      "Idioma": "Castellano",
+      "paginas": 280,
+      "Resenia": "En un mundo dominado por la tecnología, en una fecha indeterminada, Mariana —una asesina a sueldo y drogadicta— es obligada por la milicia mexicana a infiltrarse en una peligrosa red de instituciones biológicas, entre ellas Ygdrasil: una red que administra los destinos y la energía de la civilización."
+    },
+    {
+      "id": "Lluscuma",
+      "titulo": "Lluscuma",
+      "Autor": "Jorge Baradit",
+      "Categoria": "Literatura",
+      "Anio": 2018,
+      "Idioma": "Castellano",
+      "paginas": 250,
+      "Resenia": "¿Qué pasaría si descubrieras que el abuelo que te adoraba fue un asesino y torturador a las órdenes de la DINA? Basada libremente en el 'Caso del Cabo Valdés', la supuesta abducción ovni de un soldado chileno en la pampa nortina, Lluscuma narra las exploraciones del joven Francisco Camargo y la violenta disociación de la realidad que sufre al conocer las experiencias de su abuelo"
+    },
+    {
+      "id": "La-Ciencia-de-Cocinar",
+      "titulo": "La Ciencia de Cocinar",
+      "Autor": "",
+      "Categoria": "Cocina",
+      "Anio": 2018,
+      "Idioma": "Castellano",
+      "paginas": 256,
+      "Resenia": "Las principales técnicas de cocina, trucos y preparaciones explicados gracias a la ciencia. Los conceptos fundamentales de la cocina revelados junto conLas principales técnicas de cocina, trucos y preparaciones explicados gracias a la ciencia. "
+    }
+  ]
+}

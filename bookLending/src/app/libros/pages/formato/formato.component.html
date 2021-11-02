@@ -1,0 +1,187 @@
+<h1 class="mt-5" fxLayoutAlign="center">Biblioteca</h1>
+<mat-divider></mat-divider>
+<br>
+
+<form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="enviarForm()" id="htmlData" > 
+    <h3 fxLayoutAlign="center">Datos del lector</h3>
+
+    <div class="m-5" fxLayout="row"  fxLayoutGap="20px" >
+
+        <div fxFlex="100" fxLayout="column" >
+
+            <div   fxFlex="100" fxLayoutGap="20px" >
+
+                <mat-form-field fxFlex="50">
+                    <mat-label>Apellidos</mat-label>
+                    <input type="text"
+                           matInput
+                           formControlName="apellidos">
+
+                    <span class="form-text text-danger"
+                         *ngIf="campoInvalido('apellidos')">
+                        Apellidso(s) son  obligatorio(s)
+                   </span>
+                </mat-form-field>
+        
+                <mat-form-field fxFlex="50">
+                    <mat-label>Nombres</mat-label>
+                    <input type="text" 
+                           matInput
+                           formControlName="nombre"  >
+
+                    <span class="form-text text-danger"
+                         *ngIf="campoInvalido('nombre')">
+                        Nombre es obligatorio
+                   </span>
+                </mat-form-field>
+            </div>
+        
+                <mat-form-field >
+                    <mat-label>Dirección</mat-label>
+                    <input type="text"
+                           matInput
+                           formControlName="direccion">
+
+                     <span class="form-text text-danger"
+                           *ngIf="campoInvalido('direccion')">
+                            La dirección es obligatoria
+                     </span>
+                </mat-form-field>
+
+                <div fxFlex="100" fxLayoutGap="20px" >
+
+                    <mat-form-field fxFlex="50" >
+                        <mat-label>Telefono</mat-label>
+                        <input type="text" 
+                               matInput
+                               formControlName="telefono">
+
+                         <span class="form-text text-danger"
+                              *ngIf="campoInvalido('telefono')">
+                             Por favor ingrese in numero de teléfono
+                         </span>
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Correo Electronico</mat-label>
+                        <input type="text" 
+                               matInput
+                               formControlName="email">
+
+                         <span class="form-text text-danger"
+                              *ngIf="campoInvalido('email')">
+                              {{emailErrorMsg}}
+                         </span>
+                    </mat-form-field>
+                </div>
+<!----------------------------------datos del libro---------------------------------->
+                <h3 fxLayoutAlign="center">Datos del libro</h3>
+                <mat-form-field >
+                    <mat-label>Autor</mat-label>
+                    <input type="text"
+                           matInput
+                           formControlName="autor" >
+                           
+
+                    <span  class="form-text text-danger"
+                            *ngIf="campoInvalido('autor')">
+                             por favor introduzca el nombre del autor
+                    </span>
+
+                </mat-form-field>
+               
+
+                <mat-form-field >
+                    <mat-label>Título</mat-label>
+                    <input type="text" 
+                           matInput
+                           formControlName="titulo">
+
+                    <span  class="form-text text-danger"
+                            *ngIf="campoInvalido('titulo')">
+                             por favor introduzca el título del libro
+                    </span>
+             </mat-form-field>
+
+<!----------------------------------datos del las fechas---------------------------------->
+                <div fxFlex="100" fxLayoutGap="20px"  >
+
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Fecha de salida</mat-label>
+                        <input type="date"
+                                matInput
+                                formControlName="fecha">
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Fecha de Entrega</mat-label>
+                        <input type="date" 
+                               matInput
+                               formControlName="fechaentrega">
+                    </mat-form-field>
+            </div>
+    <!----------------------------url de la img para enviar a backend---------------------------------->
+
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Url de la firma</mat-label>
+                        <input type="text"
+                                matInput
+                                formControlName="firma">
+                    </mat-form-field>
+
+ <!----------------------------firma en formato img--------------------------------->
+            <h3>Firma de recibido:</h3>
+            <div class="firma-div" >
+                <img [src]="img">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="mt-2 col-6 float-end" 
+                            type="submit"
+                            mat-raised-button color="primary"
+                            (click)="downloadPDF()">
+                             Enviar Comprobante
+                   </button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </form>
+
+  <div class="firma" >
+     <h3>Url de la firma:</h3>
+     <input matInput type="text" 
+            value="{{img}}" 
+            #userinput>
+
+     <button mat-raised-button 
+            color="accent" 
+            (click)="copyInputMessage(userinput)"
+             value="click to copy" >Copiar Url</button>
+ </div>
+  
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h3>Por favor haga su firma Aquí</h3>
+    <canvas #sigPad 
+            width="300" 
+            height="150"
+            (mousedown)="onMouseDown($event)"
+            (mousemove)="onMouseMove($event)">
+    </canvas>
+<!--------------------------btns de guardar y limpiar canvas--------------------->
+    <div fxLayoutGap="20px" class="mt-2">
+        <button mat-raised-button 
+                (click)="clear()">Limpiar
+            </button>
+
+        <button mat-raised-button
+                (click)="save()">Guardar
+        </button>
+    </div>
+<!--------------------------imagen impresa del canvas--------------------->
+    <!--<img [src]="img">
+    <br/>
+    <span>{{img}}</span>-->
+</div>
+
+<span>{{miFormulario.valid}}</span>
