@@ -10,10 +10,10 @@ https://nodejs.org/es/
 ### Librerías a instalar
 Para hacer uso de las librerias utilizadas en la relizacion de la aplicaciÓn, es necesario ejecutar el siguiente comando
 
-- npm install
+> npm install
 
  ### Despliegue del Servidor
  Para desplegar el servidor de la DB es necesario realizar los siguientes pasos:
  
  - Abrir la consola, y ejecutar un cd: ruta de la carpeta libros-server
- - Luego ejecutar json-server --watch db.json
+ - Luego ejecutar > json-server --watch db.json
