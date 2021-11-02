@@ -8,7 +8,7 @@ Esta aplicación permitirá sistematizar los procesos para prestamos de libros, 
 https://nodejs.org/es/
 
 ### Librerías a instalar
-Para hacer uso de las librerias utilizadas en la relizacion de la aplicaciÓn, es necesario ejecutar el siguiente comando
+Para hacer uso de las librerias utilizadas en la relizacion de la aplicación, es necesario ejecutar el siguiente comando
 
 > npm install
 
